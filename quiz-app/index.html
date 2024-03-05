@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>Quiz App</title>
 </head>
-<body>
-    <div class="container mx-auto ">
-        <div class="flex justify-center items-center flex-col h-[100vh]">
-            <p>Welcome Quiz App</p>
-            <p>Start Testing Yourself</p>
-            <button class="bg-red-50">Start Quiz</button>
-        </div>
 
-        <div class="quiz-box">
-            
+<body>
+    <div class="container mx-auto">
+        <div class="h-[100vh] flex justify-center items-center flex-col">
+            <h1>Quiz App</h1>
+        <div id="quiz" class="card flex justify-center items-center flex-col ">
+        </div>
+        <div class="result" id="result"></div>
+        <button class="submit bg-red-50" id="submit">Submit</button>
+        <button id="retry" class="button bg-red-50 hide">Retry</button>
+        <button id="showAnswer" class="button hide">Show Answer</button>
         </div>
     </div>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
