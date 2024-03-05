@@ -23,7 +23,7 @@ background: radial-gradient(circle, rgba(255,255,255,0.7455357142857143) 0%, rgb
     text-transform: capitalize;
     border-radius: 20px 0px 0px 20px;
     margin-right: 20px;
-    width: 450px;
+    width: 550px;
 }
 
 .options {
@@ -32,7 +32,7 @@ background: radial-gradient(circle, rgba(255,255,255,0.7455357142857143) 0%, rgb
 }
 
 .option {
-    margin: 3px 0px;
+    margin: 3px 25px;
     font-size: 18px;
     font-weight: light;
     transition: 500ms all;
@@ -46,7 +46,6 @@ background: radial-gradient(circle, rgba(255,255,255,0.7455357142857143) 0%, rgb
 }
 
 .option input  {
-    appearance: none;
     margin-right: 5px;
     
 }

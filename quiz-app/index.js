@@ -72,6 +72,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         function checkAnswer() {
             const selectedOption = document.querySelector('input[name="quiz"]:checked');
             if (selectedOption) {
+                this.classList.add("mystyle")
                 const answer = selectedOption.value;
                 if (answer === quizData[currentQuestion].answer) {
                     score++;
@@ -99,7 +100,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             showAnswerButton.style.display = 'inline-block';
             resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
         }
-
+        
         function retryQuiz() {
             currentQuestion = 0;
             score = 0;
@@ -121,17 +122,18 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             let incorrectAnswersHtml = '';
             for (let i = 0; i < incorrectAnswers.length; i++) {
                 incorrectAnswersHtml += `
-      <p>
-        <strong>Question:</strong> ${incorrectAnswers[i].question}<br>
-        <strong>Your Answer:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
-        <strong>Correct Answer:</strong> ${incorrectAnswers[i].correctAnswer}
+      <p class="mb-5 pb-5 text-center">
+        <strong>Soru:</strong> ${incorrectAnswers[i].question}<br>
+        <strong>Cevabınız:</strong> ${incorrectAnswers[i].incorrectAnswer}<br>
+        <strong>Doğru Cevap:</strong> ${incorrectAnswers[i].correctAnswer}
+        <hr>
       </p>
     `;
             }
 
             resultContainer.innerHTML = `
-    <p>You scored ${score} out of ${quizData.length}!</p>
-    <p>Incorrect Answers:</p>
+    <p class="text-3xl text-[#ff5f5f] font-bold mb-5 text-center">Toplam Skor:  ${score} / ${quizData.length}!</p>
+    <p class="text-2xl text-[#ff5f5f] font-bold mb-5 text-center">Yanlış Cevaplar:</p>
     ${incorrectAnswersHtml}
   `;
         }
