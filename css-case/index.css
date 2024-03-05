@@ -17,3 +17,6 @@ body{
     background-color: #fefbeb;
 }
 
+.swiper-button-next::after,.swiper-button-prev::after{
+    content:"";
+    }
