@@ -7,7 +7,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     })
     .then(data => {
         console.log(data);
-
+        let countdownInterval;
         const firstTenData = data.slice(0, 10);
         const quizData = firstTenData.map(data => ({
             question: data.title,
@@ -69,14 +69,13 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             quizContainer.innerHTML = '';
             quizContainer.appendChild(questionElement);
             quizContainer.appendChild(optionsElement);
-            
-            
             startCountdown();
         }
 
         function startCountdown() {
-            timeLeft = 30;
-            const countdownInterval = setInterval(() => {
+            timeLeft = 30; 
+            clearInterval(countdownInterval)
+             countdownInterval = setInterval(() => {
                 countdownElement.textContent = `Time left: ${timeLeft} seconds`;
                 timeLeft--;
                 if (timeLeft < 0) {
@@ -94,7 +93,6 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         function checkAnswer() {
             const selectedOption = document.querySelector('input[name="quiz"]:checked');
             if (selectedOption) {
-                this.classList.add("mystyle")
                 const answer = selectedOption.value;
                 if (answer === quizData[currentQuestion].answer) {
                     score++;
@@ -134,7 +132,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             retryButton.style.display = 'none';
             showAnswerButton.style.display = 'none';
             resultContainer.innerHTML = '';
-            countdownElement.style.display = 'block'; 
+            countdownElement.style.display = 'block';
             displayQuestion();
         }
 
@@ -162,6 +160,18 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     ${incorrectAnswersHtml}
   `;
         }
+        submitButton.disabled = true;
+        setTimeout(() => {
+            submitButton.disabled = false;
+        }, 10000);
+
+        submitButton.addEventListener('click', function() {
+            checkAnswer();
+            this.disabled = true;
+            setTimeout(() => {
+                this.disabled = false;
+            }, 10000);
+        });
 
         submitButton.addEventListener('click', checkAnswer);
         retryButton.addEventListener('click', retryQuiz);
