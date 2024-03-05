@@ -20,10 +20,12 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         const submitButton = document.getElementById('submit');
         const retryButton = document.getElementById('retry');
         const showAnswerButton = document.getElementById('showAnswer');
+        const countdownElement = document.getElementById('countdown');
 
         let currentQuestion = 0;
         let score = 0;
         let incorrectAnswers = [];
+        let timeLeft = 30;
 
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
@@ -67,6 +69,26 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             quizContainer.innerHTML = '';
             quizContainer.appendChild(questionElement);
             quizContainer.appendChild(optionsElement);
+            
+            
+            startCountdown();
+        }
+
+        function startCountdown() {
+            timeLeft = 30;
+            const countdownInterval = setInterval(() => {
+                countdownElement.textContent = `Time left: ${timeLeft} seconds`;
+                timeLeft--;
+                if (timeLeft < 0) {
+                    clearInterval(countdownInterval);
+                    currentQuestion++;
+                    if (currentQuestion < quizData.length) {
+                        displayQuestion();
+                    } else {
+                        displayResult();
+                    }
+                }
+            }, 1000);
         }
 
         function checkAnswer() {
@@ -99,17 +121,20 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             retryButton.style.display = 'inline-block';
             showAnswerButton.style.display = 'inline-block';
             resultContainer.innerHTML = `You scored ${score} out of ${quizData.length}!`;
+            countdownElement.style.display = 'none'; 
         }
         
         function retryQuiz() {
             currentQuestion = 0;
             score = 0;
             incorrectAnswers = [];
+            timeLeft = 30;
             quizContainer.style.display = 'block';
             submitButton.style.display = 'inline-block';
             retryButton.style.display = 'none';
             showAnswerButton.style.display = 'none';
             resultContainer.innerHTML = '';
+            countdownElement.style.display = 'block'; 
             displayQuestion();
         }
 
@@ -147,6 +172,3 @@ fetch('https://jsonplaceholder.typicode.com/posts')
     .catch(error => {
         console.error('There was a problem with your fetch operation:', error);
     });
-
-
-
