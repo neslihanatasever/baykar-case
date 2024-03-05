@@ -23,8 +23,30 @@ background: radial-gradient(circle, rgba(255,255,255,0.7455357142857143) 0%, rgb
     text-transform: capitalize;
     border-radius: 20px 0px 0px 20px;
     margin-right: 20px;
+    width: 450px;
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+}
 
+.option {
+    margin: 3px 0px;
+    font-size: 18px;
+    font-weight: light;
+    transition: 500ms all;
+    padding: 2px 10px;
+    list-style-type: upper-alpha;
+}
+
+.option:hover{
+    background-color: #ecececce;
+    border-radius: 10px;
+}
+
+.option input  {
+    appearance: none;
+    margin-right: 5px;
+    
 }

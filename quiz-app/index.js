@@ -39,26 +39,29 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             questionElement.className = 'question';
             questionElement.innerHTML = questionData.question;
 
-            const optionsElement = document.createElement('div');
+            const optionsElement = document.createElement('ul');
             optionsElement.className = 'options';
 
             const shuffledOptions = [...questionData.options];
             shuffleArray(shuffledOptions);
 
             for (let i = 0; i < shuffledOptions.length; i++) {
+                const listItem = document.createElement('li');
+                listItem.className = 'option';
+            
                 const option = document.createElement('label');
-                option.className = 'option';
-
                 const radio = document.createElement('input');
                 radio.type = 'radio';
                 radio.name = 'quiz';
                 radio.value = shuffledOptions[i];
-
+            
                 const optionText = document.createTextNode(shuffledOptions[i]);
-
+            
                 option.appendChild(radio);
                 option.appendChild(optionText);
-                optionsElement.appendChild(option);
+            
+                listItem.appendChild(option);
+                optionsElement.appendChild(listItem);
             }
 
             quizContainer.innerHTML = '';
