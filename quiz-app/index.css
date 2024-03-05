@@ -5,6 +5,16 @@
 @tailwind utilities;
 
 body{
-    background-color: rgba(61, 60, 60, 0.315);
+    background-color: #3d3d3d;
     font-family: "Roboto", sans-serif;
+}
+
+.question {
+    background-color: #ff3838;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+    ;
 }
