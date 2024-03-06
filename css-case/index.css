@@ -43,3 +43,17 @@ body {
     width: 0px;
     height: 0px;
  }
+
+ .sneaker{
+    animation: hueColor 4s infinite;
+
+ }
+
+ @keyframes hueColor {
+    0%{ 
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+ }
