@@ -19,51 +19,52 @@
       <img class="absolute bottom-0 right-0 z-[1]" src="image/section-1/hero-bg.png" alt="">
       <div class="mx-auto container">
         <header class="flex justify-between mt-8 mb-8 z-10 relative text-[#78350F] w-full">
-          <div class="flex text-2xl font-bold">
+          <div class="flex items-center text-2xl font-bold">
             <h1>Collers</h1>
           </div>
-          <div class="flex flex-row gap-5 text-base	">
+          <div class="flex md:hidden">
+            <button id="menu-toggle">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
+          <div id="mobile-menu" class="hidden md:flex flex-row gap-5 text-base">
             <p>Products</p>
             <p>Solutions</p>
             <p>Pricing</p>
             <p>Resources</p>
             <p>Log In</p>
             <button>
-              <a class="border-solid border-2 border-[#78350F] pl-6 pr-6 pb-2 pt-2 rounded-md" href="/">Sign up
-                now</a>
+              <a class="border-solid border-2 border-[#78350F] pl-6 pr-6 pb-2 pt-2 rounded-md" href="/">Sign up now</a>
             </button>
           </div>
         </header>
-
-
-        <div class="flex justify-center items-center h-[60vh]">
-          <div class=" flex justify-between items-center">
-            <div class=" flex flex-col w-[60%] gap-7">
-              <h1 class="text-7xl font-semibold "> Collectible Sneakers</h1>
-              <p class="text-lg z-10 relative">Sit elit feugiat turpis sed integer integer accumsan turpis. Sed
-                suspendisse nec
-                lorem mauris. Pharetra, eu imperdiet ipsum ultrices amet.</p>
-              <div class="flex ">
-                <button
-                  class="border-solid border-2 border-[#78350F] text-[#78350F] pl-6 pr-6 pb-2 pt-2 mb-5 rounded-md">Sign
-                  up now</button>
-                <a href="https://www.youtube.com/watch?v=UEec_EbJgfU" data-fancybox
-                  class="text-[#78350F] p-3 mb-5 rounded-md flex flex-row">
+        
+        <div class="flex justify-center items-center md:h-[60vh]">
+          <div class="flex flex-col md:flex-row justify-between items-center w-full md:w-auto">
+            <div class="flex flex-col w-full md:w-[60%] gap-7 md:gap-0">
+              <h1 class="text-5xl md:text-7xl font-semibold"> Collectible Sneakers</h1>
+              <p class="text-lg z-10 relative">Sit elit feugiat turpis sed integer integer accumsan turpis. Sed suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices amet.</p>
+              <div class="flex flex-col md:flex-row items-center">
+                <button class="border-solid border-2 border-[#78350F] text-[#78350F] pl-6 pr-6 pb-2 pt-2 mb-5 rounded-md md:mb-0">Sign up now</button>
+                <a href="https://www.youtube.com/watch?v=UEec_EbJgfU" data-fancybox class="text-[#78350F] p-3 mb-5 rounded-md md:ml-5 flex flex-row">
                   <img src="image/section-1/play-circle.png" alt="">
-                  Watch Demo</a>
+                  Watch Demo
+                </a>
               </div>
             </div>
-
-            <div class="w-[40%]">
+        
+            <div class="w-full md:w-[40%]">
               <div class="relative flex justify-center items-center">
-                <div
-                  class="sneaker bg-[#FBBF24] w-[370px] h-[370px] rounded-[50px] absolute z-[2] left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
+                <div class="sneaker bg-[#FBBF24] w-[250px] md:w-[370px] h-[250px] md:h-[370px] rounded-[50px] absolute z-[2] left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2">
                 </div>
                 <img class="sneaker mt-[-65px] z-[3]" data-tilt src="image/section-1/sneaker.png" alt="">
               </div>
             </div>
           </div>
         </div>
+        
       </div>
       <div class="container mx-auto flex justify-between z-[4]">
         <div class="w-[373px]">
