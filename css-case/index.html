@@ -15,10 +15,10 @@
 <body>
 
   <div class="">
-    <div class="first-hero pb-[50px]">
+    <div class="first-hero pb-[50px] h-auto md:h-[100vh] md:flex md:justify-between md:items-center flex-col bg-[#fefbeb] relative">
       <img class="absolute bottom-0 right-0 z-[1]" src="image/section-1/hero-bg.png" alt="">
       <div class="mx-auto container">
-        <header class="flex justify-between  mt-8 mb-8 z-10 relative text-[#78350F] w-full">
+        <header class="flex justify-between px-5 py-5 md:mt-8 mb-8 z-10 relative text-[#78350F] w-full">
           <div class="flex items-center text-2xl font-bold">
             <h1>Collers</h1>
           </div>
@@ -41,21 +41,21 @@
           </div>
         </header>
         
-        <div class="flex justify-center items-center md:h-[60vh]">
+        <div class="flex justify-center items-center  md:h-[60vh] px-5 py-5">
           <div class="flex flex-col md:flex-row justify-between items-center w-full md:w-auto">
             <div class="flex flex-col w-full md:w-[60%] gap-7 md:gap-0">
-              <h1 class="text-5xl md:text-7xl font-semibold"> Collectible Sneakers</h1>
-              <p class="text-lg z-10 relative">Sit elit feugiat turpis sed integer integer accumsan turpis. Sed suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices amet.</p>
-              <div class="flex flex-col md:flex-row items-center">
-                <button class="border-solid border-2 border-[#78350F] text-[#78350F] pl-6 pr-6 pb-2 pt-2 mb-5 rounded-md md:mb-0">Sign up now</button>
-                <a href="https://www.youtube.com/watch?v=UEec_EbJgfU" data-fancybox class="text-[#78350F] p-3 mb-5 rounded-md md:ml-5 flex flex-row">
+              <h1 class="text-5xl md:text-7xl font-semibold text-center md:text-left"> Collectible Sneakers</h1>
+              <p class="text-lg z-10 relative text-center md:text-left">Sit elit feugiat turpis sed integer integer accumsan turpis. Sed suspendisse nec lorem mauris. Pharetra, eu imperdiet ipsum ultrices amet.</p>
+              <div class="flex flex-row items-center mt-5 mb-5 justify-center md:justify-start">
+                <button class="border-solid border-2 border-[#78350F] text-[#78350F] pl-6 pr-6 pb-2 pt-2  rounded-md md:mb-0">Sign up now</button>
+                <a href="https://www.youtube.com/watch?v=UEec_EbJgfU" data-fancybox class="text-[#78350F] p-3 rounded-md md:ml-5 flex flex-row">
                   <img src="image/section-1/play-circle.png" alt="">
                   Watch Demo
                 </a>
               </div>
             </div>
         
-            <div class="w-full md:w-[40%]">
+            <div class="w-full md:w-[40%] mt-10">
               <div class="relative flex justify-center items-center">
                 <div class="sneaker bg-[#FBBF24] w-[250px] md:w-[370px] h-[250px] md:h-[370px] rounded-[50px] absolute z-[2] left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2">
                 </div>
@@ -66,8 +66,8 @@
         </div>
         
       </div>
-      <div class="container mx-auto flex justify-between z-[4]">
-        <div class="w-[373px]">
+      <div class="container mx-auto flex flex-col items-center md:flex-row lg:flex-row  justify-between z-[4]">
+        <div class="">
           <div class="relative">
             <img src="icon/kupa.png" alt="">
             <img class="absolute z-[1] top-0 left-[25px]" src="image/section-2/tersucgen.png" alt="">
@@ -77,7 +77,7 @@
             massa.
           </p>
         </div>
-        <div class="w-[373px]">
+        <div class="">
           <div class="relative">
             <img src="icon/karpuz.png" alt="">
             <img class="absolute z-[1] top-0 left-[25px]" src="image/section-2/ucgen.png" alt="">
@@ -87,7 +87,7 @@
             massa.
           </p>
         </div>
-        <div class="w-[373px]">
+        <div class="">
           <div class="relative">
             <img src="icon/tv.png" alt="">
             <img class="absolute z-[1] top-0 left-[25px]" src="image/section-2/daire.png" alt="">
@@ -104,7 +104,7 @@
     </div>
 
 
-    <!-- ürün tanıtımı kısmı: RESPONSİVE OLMADI -->
+    <!-- ürün tanıtımı kısmı: -->
     <div class="flex flex-col  bg-[#0F172A] py-10 text-white gap-9">
       <div class="mx-auto container">
         <div class="flex lg:flex-row md:flex-row sm:flex-col mt-10 mb-10 justify-between">
