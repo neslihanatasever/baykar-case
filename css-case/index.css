@@ -20,7 +20,7 @@ body {
     z-index: 1;
 }
 
-.point:hover .worldcard{
+.point:hover .worldcard {
     visibility: visible;
     opacity: 1;
     margin-bottom: -5px;
@@ -33,18 +33,19 @@ body {
     border-width: 10px 5px 0px 5px;
     width: 0px;
     height: 0px;
- }
+}
 
- .sneaker{
+.sneaker {
     animation: hueColor 4s infinite;
 
- }
+}
 
- @keyframes hueColor {
-    0%{ 
+@keyframes hueColor {
+    0% {
         filter: hue-rotate(0deg);
     }
-    100%{
+
+    100% {
         filter: hue-rotate(360deg);
     }
- }
+}
